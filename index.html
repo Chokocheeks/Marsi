@@ -110,7 +110,7 @@
       </div>
       <div class="col-7 additional-input">
         <input type="text" id="search" name="search">
-        <label for="email">Service Search
+        <label for="search">Service Search
           <img src="./img/search-icon.svg"></img>
         </label>
         <button>
@@ -213,40 +213,56 @@
       <div class="col-7">
         <ul class="row link-list">
           <li>
-            <div class='social-link'>
-              <a href="https://www.facebook.com/">
+              <a class="media-link" href="https://www.facebook.com/">
                 <img src="./img/facebook.svg" alt="Facebook-icon">
                 <span>Facebook</span>
               </a>
-            </div>
           </li>
           <li>
-            <div class='social-link'>
-              <a href="https://www.pinterest.com/">
+              <a class="media-link" href="https://www.pinterest.com/">
                 <img src="./img/pinterest.svg" alt="pinterest-icon">
                 <span>Pinterest</span>
               </a>
-            </div>
           </li>
           <li>
-            <div class='social-link'>
-              <a href="https://www.instagram.com/?hl=ru">
+              <a class="media-link" href="https://www.instagram.com/?hl=ru">
                 <img src="./img/instagram.svg" alt="instagram-icon">
                 <span>Instagram</span>
               </a>
-            </div>
           </li>
           <li>
-            <div class='social-link'>
-              <a href="https://twitter.com/?lang=ru">
+              <a class="media-link" href="https://twitter.com/?lang=ru">
                 <img src="./img/twitter.svg" alt="twitter-icon">
                 <span>Twitter</span>
-              </a>
-            </div>
+              </a>         
           </li>
         </ul>
       </div>
     </div>
+    <section class="section">
+      <div class="row vertical-center">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+          <form action="" class="form-contact">
+            <h2>Contact form</h2>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" minlength="2" maxlength="200" autocomplete="additional-name" required>
+              <label for="phone">Phone number</label>
+              <input type="tel" value="333-33-333-33-33" placeholder="999-11-22-33-44" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input type="email" pattern="[^@\s]+@[^@\s]+" id="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <button>Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>  
+    </section>
 </main>
 </body>
 </html>
