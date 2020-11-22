@@ -110,6 +110,35 @@ p{
 }
 .menu {
     padding-top: 28px;
+    &-block{
+        position: relative;
+    }
+    &-checkbox{
+        position: absolute;
+        left: 15px;
+        width: 45px;
+        height: 20px;
+        padding: 0;
+        z-index: 2;
+        opacity: 0;
+        &:hover{
+            cursor: pointer;
+        }
+        &:checked{
+            &+.menu-button{
+                .menu-button_icon{
+                    background: transparent;
+                    transform: translateX(12px);
+                    &::before{
+                        transform: rotate(45deg) translateY(12px);
+                    }
+                    &::after{
+                        transform: rotate(-45deg) translateY(-12px);
+                    }
+                }
+            }
+        }
+    }
     &-button{
         width: 38px;
         border: 0;
@@ -128,6 +157,7 @@ p{
             height: 2px;
             background: $text-main;
             text-align: right;
+            transition: all .2s ease-in;
             &::before,
             &::after {
                 content: "";
@@ -137,6 +167,7 @@ p{
                 width: 36px;
                 height: 2px;
                 border-radius: 10px;
+                transition: all .2s ease-in;
             }
             &::before {
                 top: -9px;
@@ -294,4 +325,13 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.gallery {
+    padding-top: 100px;
+    .mt:first-child {
+        margin-top: -150px;
+    }
+    .mt:nth-child(2){
+        margin-top: -50px;
+    }
 }
