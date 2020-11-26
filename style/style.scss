@@ -80,6 +80,14 @@ p{
         font-size: 12px;
         line-height: 18px;
     }
+    &.middle{
+        font-size: 18px;
+        line-height: 26px;
+        color: $text-main;
+    }
+    &.margin-bottom{
+        margin-bottom: 15px;
+    }
 }
 .bg-grey{
     background: $main-bg-color-dark;
@@ -112,6 +120,14 @@ p{
     padding-top: 28px;
     &-block{
         position: relative;
+        &-list{   //menu-block-list
+            position: absolute;
+            display: none;
+            padding: 10px;
+            background: $main-surface;
+            box-shadow: 0 0 10px $shadow-dark;
+            border-radius: 5px;
+        }
     }
     &-checkbox{
         position: absolute;
@@ -136,6 +152,9 @@ p{
                         transform: rotate(-45deg) translateY(-12px);
                     }
                 }
+            }
+            &~.menu-block-list{
+                display: block;
             }
         }
     }
@@ -303,20 +322,29 @@ p{
     justify-content: space-between;
 }
 .icon-background{
-    position: relative;
-    min-width: 150px;
-    min-height: 150px;
-    background: $main-surface;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 30px; 
+    padding-right: 15px;
     margin-top: 33px;
-    div{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        
+    &>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 150px;
+        min-height: 150px;
+        background: $main-surface;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 30px; 
+        span{
+            display: flex;
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: inherit;
+            color: $text-main;
+        }
     }
+    
 }
 .link-list{
     justify-content: space-between;
@@ -328,6 +356,10 @@ p{
 }
 .gallery {
     padding-top: 100px;
+    .grayscale{
+        filter: grayscale(100%);
+        border-radius: 30px;
+    }
     .mt:first-child {
         margin-top: -150px;
     }
