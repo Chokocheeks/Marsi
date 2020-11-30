@@ -608,6 +608,7 @@ p.margin-bottom {
 
 .gallery {
   padding-top: 100px;
+  overflow: hidden;
 }
 
 .gallery .grayscale {
@@ -620,15 +621,32 @@ p.margin-bottom {
   margin-top: -150px;
 }
 
-.gallery .mt:nth-child(2) {
+.gallery .mt:nth-child(2n) {
   margin-top: -50px;
 }
 
-.form-row {
+.form-contact h2 {
   margin-bottom: 30px;
 }
 
-.form-row input {
+.form-contact .row {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.form-contact .row .form-input:first-child {
+  margin-right: 20px;
+}
+
+.form-contact .form-input {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-contact input {
+  padding: 0 30px;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   height: 61px;
@@ -638,29 +656,30 @@ p.margin-bottom {
   cursor: text;
 }
 
-.form-row input[type=submit] {
-  cursor: pointer;
+.form-contact input.active + label {
+  top: -10px;
+  border-radius: 5px;
+  background-color: #fff8f0;
 }
 
-.form-row input[type=submit] :hover {
+.form-contact input[type=submit] {
+  cursor: pointer;
+  -webkit-transition: all .05s ease-in;
+  transition: all .05s ease-in;
+}
+
+.form-contact input[type=submit]:hover {
   background-color: #4CAF50;
   color: #FDFDFD;
 }
 
-.form-row label {
+.form-contact label {
   position: absolute;
+  top: 20px;
+  left: 20px;
   text-align: center;
-  display: none;
-}
-
-.grow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  padding: 4px;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
 }
 /*# sourceMappingURL=style.css.map */

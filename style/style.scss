@@ -356,6 +356,7 @@ p{
 }
 .gallery {
     padding-top: 100px;
+    overflow: hidden;
     .grayscale{
         filter: grayscale(100%);
         border-radius: 30px;
@@ -363,36 +364,60 @@ p{
     .mt:first-child {
         margin-top: -150px;
     }
-    .mt:nth-child(2){
+    .mt:nth-child(2n){
         margin-top: -50px;
     }
 }
-.form-row {
-    margin-bottom: 30px;
+.form-contact {
+    h2{
+        margin-bottom: 30px;
+    }
+    .row{
+    padding: 0;
+    margin: 0;
+    position: relative;
+        .form-input{
+            &:first-child{
+                margin-right: 20px;
+            }
+        }
+    }
+    .form-input{
+        position: relative;
+        margin-bottom: 30px;
+        width: 100%;
+    }
     input{
+        padding: 0 30px;
         box-shadow: 0px 0px 20px $shadow;
         height: 61px;
         border: none;
         width: 100%;
         border-radius: 10px;
         cursor: text;
+        &.active{
+            &+label{
+                top: -10px;
+                border-radius: 5px;
+                background-color: rgb(255, 248, 240);
+            }
+        }
     }
     input[type=submit] {
         cursor: pointer;
-        :hover {
+        transition: all .05s ease-in;
+        &:hover {
             background-color: $submit-color;
-            color: #FDFDFD;
-
+            color: $gradient-light;
         }
     }  
     label {
         position: absolute;
+        top: 20px;
+        left: 20px;
         text-align: center;
-        display: none;
+        padding: 4px;
+        transition: all .1s ease;
     }
 }
-.grow{
-    display: flex;
-    flex-grow: 1;
-    align-content: space-between;
-}                                                                               
+                                                                             
