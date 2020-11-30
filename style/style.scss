@@ -378,16 +378,21 @@ p{
         cursor: text;
     }
     input[type=submit] {
-        background-color: $submit-color;
-        color: #FDFDFD;
         cursor: pointer;
+        :hover {
+            background-color: $submit-color;
+            color: #FDFDFD;
+
+        }
     }  
     label {
         position: absolute;
         text-align: center;
+        display: none;
     }
 }
 .grow{
     display: flex;
     flex-grow: 1;
+    align-content: space-between;
 }                                                                               
