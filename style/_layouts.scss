@@ -25,6 +25,7 @@ body {
 .row {
     display: flex;
     margin: 0 -15px;
+    padding-right: 15px;
     &.vertical-center{
         align-items: center;
     }

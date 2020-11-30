@@ -285,7 +285,7 @@
         <div class="col-6">
           <form action="" class="form-contact">
             <h2>Contact form</h2>
-            <div class="form-row">
+            <div class="form-row grow">
               <label for="name">Name</label>
               <input type="text" id="name" minlength="2" maxlength="200" autocomplete="additional-name" required>
               <label for="phone">Phone number</label>
@@ -296,7 +296,15 @@
               <input type="email-contact" pattern="[^@\s]+@[^@\s]+" id="email-contact" autocomplete="email" required>
             </div>
             <div class="form-row">
-              <button>Submit</button>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" required>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <input type="text" id="message" required>
+            </div>
+            <div class="form-row">
+              <input type="submit" value="Submit">
             </div>
           </form>
         </div>
