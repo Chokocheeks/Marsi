@@ -111,22 +111,12 @@ body {
   padding: 0 15px;
 }
 
-.col-8 {
-  width: calc(100% * 8 / 12);
-}
-
-.col-3 {
-  width: calc(100% * 3 / 12);
-}
-
 .col-1 {
   width: calc(100% * 1 / 12);
 }
 
-@media (max-width: 9 992px) {
-  .col-lg-4 {
-    width: calc(100% * 4 / 12) !important;
-  }
+.col-3 {
+  width: calc(100% * 3 / 12);
 }
 
 .col-4 {
@@ -137,18 +127,58 @@ body {
   width: calc(100% * 5 / 12);
 }
 
-@media (max-width: 992px) {
-  .col-lg-8 {
-    width: calc(100% * 8 / 12) !important;
-  }
-}
-
 .col-6 {
   width: calc(100% * 6 / 12);
 }
 
 .col-7 {
   width: calc(100% * 7 / 12);
+}
+
+.col-8 {
+  width: calc(100% * 8 / 12);
+}
+
+@media (max-width: 992px) {
+  .col-lg-1 {
+    width: calc(100% * 1 / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-3 {
+    width: calc(100% * 3 / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-4 {
+    width: calc(100% * 4 / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-5 {
+    width: calc(100% * 5 / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-6 {
+    width: calc(100% * 6 / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-7 {
+    width: calc(100% * 7s / 12) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-lg-8 {
+    width: calc(100% * 8 / 12) !important;
+  }
 }
 
 .offset-1 {
@@ -211,6 +241,10 @@ a {
   font-style: normal;
 }
 
+a span:first-child {
+  margin-top: 15px;
+}
+
 .logo {
   font-style: normal;
   font-weight: bold;
@@ -252,6 +286,14 @@ p.middle {
 
 p.margin-bottom {
   margin-bottom: 15px;
+}
+
+p.small-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #282828;
+  margin-bottom: 40px;
 }
 
 .bg-grey {
@@ -311,6 +353,14 @@ p.margin-bottom {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+}
+
+.menu-block-list .menu-block-item a {
+  color: #8A2BE2;
+}
+
+.menu-block-list .menu-block-item a:hover {
+  color: #5F9EA0;
 }
 
 .menu-checkbox {
@@ -604,6 +654,11 @@ p.margin-bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact-list {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .gallery {

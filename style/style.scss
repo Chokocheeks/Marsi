@@ -52,6 +52,7 @@ a {
     line-height: 24px;
     color: $text-main;
     font-style: normal;
+    } 
 }
 .logo {
     font-style: normal;
@@ -87,6 +88,13 @@ p{
     }
     &.margin-bottom{
         margin-bottom: 15px;
+    }
+    &.small-bold{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-main;
+        margin-bottom: 40px ;
     }
 }
 .bg-grey{
@@ -127,6 +135,14 @@ p{
             background: $main-surface;
             box-shadow: 0 0 10px $shadow-dark;
             border-radius: 5px;
+            .menu-block-item{
+                a{
+                    color: $menu-color;
+                    &:hover {
+                        color: $menu-color-hover;
+                    }
+                }
+            }
         }
     }
     &-checkbox{
@@ -354,9 +370,19 @@ p{
     flex-direction: column;
     align-items: center;
 }
+.contact-list{
+    justify-content: space-around;
+
+}
 .gallery {
     padding-top: 100px;
     overflow: hidden;
+    &-item{
+        transition: .3s ease;
+    }
+    &-previous{
+        opacity: 0;
+    }
     .grayscale{
         filter: grayscale(100%);
         border-radius: 30px;
