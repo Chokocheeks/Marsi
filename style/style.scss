@@ -9,6 +9,8 @@
 .social {
     display: flex;
     &-link {
+        position: relative;
+        right: 10px;
         &:hover{
             color: $text-highlight;
             svg{
@@ -21,7 +23,7 @@
     li {
         //1 li element
         &:first-child {
-            margin-right: 50px;
+            margin-right: 35px;
         }
     }
 }
@@ -52,8 +54,7 @@ a {
     line-height: 24px;
     color: $text-main;
     font-style: normal;
-    } 
-}
+} 
 .logo {
     font-style: normal;
     font-weight: bold;
@@ -102,6 +103,7 @@ p{
 }
 //style for header
 .header {
+    margin-top: 30px;
     min-height: 500px;
     background-image: url('../img/header-bg.svg');
     background-repeat: no-repeat;
@@ -114,30 +116,36 @@ p{
     }
     h1 {
         font-size: 48px;
-        font-weight: 700px;
+        font-weight: bold;
         line-height: 72px; 
         span {
             color: $text-highlight;
         }
     }
     .header-img {
-        margin-right: -40px;
+        margin-right: -55px;
+        margin-top: -60px;
     }
 }
 .menu {
     padding-top: 28px;
     &-block{
         position: relative;
+        left: 45px;
         &-list{   //menu-block-list
             position: absolute;
             display: none;
-            padding: 10px;
+            padding: 20px;
+            top: 30px;
+            left:  15px; 
             background: $main-surface;
             box-shadow: 0 0 10px $shadow-dark;
             border-radius: 5px;
             .menu-block-item{
+                font-family: inherit;
+                font-weight: bold;
                 a{
-                    color: $menu-color;
+                    color: $shadow-dark;
                     &:hover {
                         color: $menu-color-hover;
                     }
@@ -374,15 +382,28 @@ p{
     justify-content: space-around;
 
 }
+.gallery-previous, .gallery-next{
+    background-color: $shadow-dark;
+    border: none;
+    color: $text-main;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 0 15px $shadow-dark;
+    border-radius: 40%;
+    cursor: pointer;
+}
 .gallery {
     padding-top: 100px;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
     &-item{
         transition: .3s ease;
     }
-    &-previous{
-        opacity: 0;
-    }
+    // &-previous{
+    //     opacity: 0;
+    // }
     .grayscale{
         filter: grayscale(100%);
         border-radius: 30px;
@@ -392,6 +413,9 @@ p{
     }
     .mt:nth-child(2n){
         margin-top: -50px;
+    }
+    .mt:nth-child(3n){
+        margin-top: -80px;
     }
 }
 .form-contact {
@@ -446,4 +470,12 @@ p{
         transition: all .1s ease;
     }
 }
-                                                                             
+.swiper-container {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 600px;
+        overflow: hidden;
+    }
+  }

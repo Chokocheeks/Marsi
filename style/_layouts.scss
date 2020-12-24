@@ -84,7 +84,7 @@ body {
 }
 .col-lg-7{
     @media (max-width: $laptop-size) {
-        width:calc(100% * 7s / 12)!important;  
+        width:calc(100% * 7 / 12)!important;  
     }
 }
 .col-lg-8{
