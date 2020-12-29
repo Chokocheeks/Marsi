@@ -107,6 +107,13 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 992px) {
+  .row .margin-auto {
+    margin-left: 0 auto;
+    margin-left: 0 auto;
+  }
+}
+
 .col-1, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
   padding: 0 15px;
 }
@@ -140,38 +147,14 @@ body {
 }
 
 @media (max-width: 992px) {
-  .col-lg-1 {
-    width: calc(100% * 1 / 12) !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .col-lg-3 {
-    width: calc(100% * 3 / 12) !important;
+  .col-lg-12 {
+    width: calc(100% * 12 / 12) !important;
   }
 }
 
 @media (max-width: 992px) {
   .col-lg-4 {
     width: calc(100% * 4 / 12) !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .col-lg-5 {
-    width: calc(100% * 5 / 12) !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .col-lg-6 {
-    width: calc(100% * 6 / 12) !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .col-lg-7 {
-    width: calc(100% * 7 / 12) !important;
   }
 }
 
@@ -191,8 +174,108 @@ body {
   }
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  20% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  44% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  20% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  44% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(1.7);
+            transform: scale(1.7);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
 .text-right {
   text-align: right;
+}
+
+.block-margine {
+  margin-top: 100px;
+}
+
+.block-margine-h2 {
+  margin-top: 57px;
 }
 
 .social {
@@ -303,6 +386,7 @@ p.small-bold {
 
 .header {
   margin-top: 30px;
+  margin-bottom: 80px;
   min-height: 500px;
   background-image: url("../img/header-bg.svg");
   background-repeat: no-repeat;
@@ -329,6 +413,8 @@ p.small-bold {
   font-size: 48px;
   font-weight: bold;
   line-height: 72px;
+  margin-top: 36px;
+  margin-bottom: 20px;
 }
 
 .header h1 span {
@@ -336,8 +422,8 @@ p.small-bold {
 }
 
 .header .header-img {
-  margin-right: -55px;
-  margin-top: -60px;
+  margin-right: -58px;
+  margin-top: -84px;
 }
 
 .menu {
@@ -455,16 +541,43 @@ p.small-bold {
 }
 
 .scroll-down-button {
+  position: relative;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  margin-top: 68px;
+  margin-top: 55px;
   padding: 0;
   border: 0;
   background: transparent;
   font-family: inherit;
   font-size: 12px;
   color: #282828;
+  z-index: 1;
+}
+
+.scroll-down-button::after {
+  content: '';
+  position: absolute;
+  width: 57px;
+  height: 57px;
+  top: 0;
+  left: 0;
+  border: 1px solid #FF4C60;
+  border-radius: 50%;
+  z-index: 0;
+  -webkit-animation: fadeOut 1.5s infinite;
+          animation: fadeOut 1.5s infinite;
+}
+
+.scroll-down-button .animate-bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
 .scroll-down-button .icon {
@@ -571,7 +684,14 @@ p.small-bold {
   background-position: right center;
 }
 
+@media (max-width: 1200px) {
+  .additional-input button {
+    right: 50px;
+  }
+}
+
 .graph-background {
+  margin-top: 14px;
   max-width: 530px;
   padding: 40px 100px;
   background: radial-gradient(51.33% 49.78% at 49.47% 44.58%, #FDFDFD 0%, #FCE8E6 100%);
@@ -584,7 +704,7 @@ p.small-bold {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 36px 0 48px;
+  margin: 56px 0 48px;
 }
 
 .skills-list-item {

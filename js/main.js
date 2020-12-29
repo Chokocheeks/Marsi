@@ -70,6 +70,21 @@ document.addEventListener('DOMContentLoaded', function(){
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0
+              },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }, 
+        }
       });
 
       const buttonPrevious = document.querySelector('.gallery-previous');

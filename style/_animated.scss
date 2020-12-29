@@ -1,0 +1,35 @@
+@keyframes bounce{
+    0%{
+        transform: scale(0.8);
+    }
+    20%{
+        transform: scale(1.2);
+    }
+    38%{
+        transform: scale(1);
+    }
+    44%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 0.5;
+        transform: scale(0.2);
+    }
+    30%{
+        opacity: 1;
+        transform: scale(0.2);
+    }
+    80%{
+        opacity: 1;
+        transform: scale(1.7);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2);
+    }
+}

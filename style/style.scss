@@ -1,11 +1,18 @@
 @import '_reset';
 @import '_colors';
 @import '_layouts';
+@import '_animated';
 
 .text-right {
     text-align: right;
 }
-
+.block-margine{
+    margin-top: 100px;
+    &-h2{
+        margin-top: 57px;
+        
+    }
+}
 .social {
     display: flex;
     &-link {
@@ -104,6 +111,7 @@ p{
 //style for header
 .header {
     margin-top: 30px;
+    margin-bottom: 80px;
     min-height: 500px;
     background-image: url('../img/header-bg.svg');
     background-repeat: no-repeat;
@@ -118,13 +126,15 @@ p{
         font-size: 48px;
         font-weight: bold;
         line-height: 72px; 
+        margin-top: 36px;
+        margin-bottom: 20px;
         span {
             color: $text-highlight;
         }
     }
     .header-img {
-        margin-right: -55px;
-        margin-top: -60px;
+        margin-right: -58px;
+        margin-top: -84px;
     }
 }
 .menu {
@@ -222,14 +232,34 @@ p{
     }
 }
 .scroll-down-button{
+    position: relative;
     appearance:none;
-    margin-top: 68px;
+    margin-top: 55px;
     padding: 0;
     border: 0;
     background: transparent;
     font-family: inherit;
     font-size: 12px;
     color: $text-main;
+    z-index: 1;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 57px;
+        height: 57px;
+        top: 0;
+        left: 0;
+        border: 1px solid $text-highlight;
+        border-radius: 50%;
+        z-index: 0;
+        animation: fadeOut 1.5s infinite;
+    }
+    .animate-bounce{
+        animation-name: bounce;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    }
     .icon{
         position: relative;
         display: inline-block;
@@ -317,11 +347,14 @@ p{
                 cursor: pointer;
                 background-position: right center;
             }
-            
+            @media (max-width: $laptop-max-size){
+                right: 50px;
+            }
         }
     }
 }
 .graph-background{
+    margin-top: 14px;
     max-width: 530px;
     padding: 40px 100px;
     background: radial-gradient(51.33% 49.78% at 49.47% 44.58%, $gradient-light 0%, $gradient-colored 100%);
@@ -330,7 +363,7 @@ p{
 }
 .skills-list{
     justify-content: space-between;
-    margin: 36px 0 48px;
+    margin: 56px 0 48px;
     &-item{
         display: flex;
         flex-direction: column;
